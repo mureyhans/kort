@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Archer One
   m_EditorClassIdentifier: 
   charName: Archer One
-  charDesc: A desperate man trying to give a living for his family, ready to take
-    any to shoot anyone as long as he get paid.
+  charDesc: May his shot never miss.
   charImage: {fileID: 21300000, guid: fdc1f2375e33d81498860ed7f132c807, type: 3}
+  charTypeImage: {fileID: 21300000, guid: 4892fbbf05200a2428afe9c1d0ce5782, type: 3}
   charPoint: 2

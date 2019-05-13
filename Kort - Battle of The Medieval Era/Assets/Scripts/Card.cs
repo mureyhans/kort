@@ -9,5 +9,6 @@ public class Card : ScriptableObject
     public string charDesc;
 
     public Sprite charImage;
+    public Sprite charTypeImage;
     public int charPoint;
 }

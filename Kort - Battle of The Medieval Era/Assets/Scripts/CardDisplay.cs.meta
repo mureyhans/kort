@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 52a273ced34fd4241869d5e9c357dafd
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - card: {fileID: 11400000, guid: 97ad0cb51a09a694785f4e2428b68de2, type: 2}
+  - charNameText: {instanceID: 0}
+  - charDescText: {instanceID: 0}
+  - charArtwork: {instanceID: 0}
+  - charPointText: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

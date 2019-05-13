@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 1ca82d63eac9738419cdf15fb7e89587
+guid: dd772295bcbac3e4e8ea17584e28872c
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 300
-  forceTextureCase: -2
+  fontSize: 150
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Enchanted Land
+  fontName: Monotype Corsiva
   fontNames:
-  - Enchanted Land
+  - Monotype Corsiva
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 3
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
