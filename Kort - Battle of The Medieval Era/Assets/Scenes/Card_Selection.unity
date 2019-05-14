@@ -2184,7 +2184,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: da492cd013468c046ab802207d0c6adb, type: 2}
   - {fileID: 11400000, guid: da492cd013468c046ab802207d0c6adb, type: 2}
   - {fileID: 11400000, guid: da492cd013468c046ab802207d0c6adb, type: 2}
-  cardSlotsParent: {fileID: 564443531}
+  cardsParent: {fileID: 564443531}
   cardSlots:
   - {fileID: 1929045756}
   - {fileID: 1764861059}
