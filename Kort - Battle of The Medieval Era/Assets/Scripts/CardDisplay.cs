@@ -10,7 +10,7 @@ public class CardDisplay : MonoBehaviour
     public Text charNameText;
     public Text charDescText;
 
-    public Image charArtwork;
+    public Image charImage;
     public Image charType;
     public Text charPointText;
 
@@ -19,9 +19,8 @@ public class CardDisplay : MonoBehaviour
     {
         charNameText.text = card.charName;
         charDescText.text = card.charDesc;
-        charArtwork.sprite = card.charImage;
+        charImage.sprite = card.charImage;
         charType.sprite = card.charTypeImage;
         charPointText.text = card.charPoint.ToString();
     }
-
 }
