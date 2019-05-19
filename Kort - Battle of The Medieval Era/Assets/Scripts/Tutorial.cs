@@ -7,7 +7,7 @@ public class Tutorial : MonoBehaviour
 {
 	
     public void backToMenu(){
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
 	}
     // Start is called before the first frame update
     void Start()
