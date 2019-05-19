@@ -24,4 +24,6 @@ public class Card : ScriptableObject
     [Space]
     public CardType charTypeEnum;
     public bool isHeroChar;
+
+
 }

@@ -2,19 +2,47 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardManager : MonoBehaviour
+public class Character : MonoBehaviour
 {
+    private int CardsInDeck;
+    private int UnitCards;
+    private int SpecialCards;
+    private int HeroCards;
+
     [SerializeField] DeckPanel deckPanel;
     [SerializeField] CardsCollection cardsCollection;
+    [SerializeField] StatPanel statPanel;
+
+    private void Awake()
+    {
+        CardsInDeck = deckPanel.getCountCardsInDeck();
+        UnitCards = deckPanel.getCountUnitCards();
+        SpecialCards = deckPanel.getCountSpecialCards();
+        HeroCards = deckPanel.getCountHeroCards();
+        statPanel.SetStats(CardsInDeck, UnitCards, SpecialCards, HeroCards);
+        statPanel.UpdateStatValues();
+
+        cardsCollection.OnCardRightClickedEvent += MoveCardToDeck;
+        deckPanel.OnCardRightClickedEvent += MoveCardToCollection;
+    }
+    public void Update()
+    {
+        CardsInDeck = deckPanel.getCountCardsInDeck();
+        UnitCards = deckPanel.getCountUnitCards();
+        SpecialCards = deckPanel.getCountSpecialCards();
+        HeroCards = deckPanel.getCountHeroCards();
+        statPanel.SetStats(CardsInDeck, UnitCards, SpecialCards, HeroCards);
+        statPanel.UpdateStatValues();
+    }
 
     public void MoveCardToDeck(Card card) //equip
     {
 
         if (!deckPanel.IsFull()) //deck ga penuh
         {
-            if (cardsCollection.RemoveCard(card))
+            if (deckPanel.AddCard(card))
             {
-                if (deckPanel.AddCard(card))
+                if (cardsCollection.RemoveCard(card))
                 {
                     Debug.Log("Card added to the deck.");
                     //int idx = cardsCollection.FindIndexCard(card);
@@ -48,11 +76,6 @@ public class CardManager : MonoBehaviour
         }
     }
 
-    private void Awake()
-    {
-        cardsCollection.OnCardRightClickedEvent += MoveCardToDeck;
-        deckPanel.OnCardRightClickedEvent += MoveCardToCollection;
-    }
 
 
 }
