@@ -7,9 +7,9 @@ public class CardsCollection : MonoBehaviour
 {
     //https://stackoverflow.com/questions/32306704/unity-pass-data-between-scenes
     //https://gamedev.stackexchange.com/questions/110958/unity-5-what-is-the-proper-way-to-handle-data-between-scenes
-    [SerializeField] List<Card> cards;
-    [SerializeField] Transform cardsParent;
-    [SerializeField] CardSlot[] cardSlots;
+    [SerializeField] List<Card> cards = new List<Card>();
+    [SerializeField] Transform cardsParent = null;
+    [SerializeField] public CardSlot[] cardSlots = new CardSlot[40];
 
 
     public event Action<Card> OnCardRightClickedEvent;

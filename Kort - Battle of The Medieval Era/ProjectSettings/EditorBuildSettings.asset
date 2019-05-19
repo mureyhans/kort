@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CardSelection.unity
     guid: 99969f2b45587764dad207e0a688978a
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d61e67eee4085aa49949a9f9f764ef92
   m_configObjects: {}

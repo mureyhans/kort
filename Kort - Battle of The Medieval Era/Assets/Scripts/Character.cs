@@ -9,9 +9,9 @@ public class Character : MonoBehaviour
     private int SpecialCards;
     private int HeroCards;
 
-    [SerializeField] DeckPanel deckPanel;
-    [SerializeField] CardsCollection cardsCollection;
-    [SerializeField] StatPanel statPanel;
+    [SerializeField] DeckPanel deckPanel = null;
+    [SerializeField] CardsCollection cardsCollection = null;
+    [SerializeField] StatPanel statPanel = null;
 
     private void Awake()
     {
