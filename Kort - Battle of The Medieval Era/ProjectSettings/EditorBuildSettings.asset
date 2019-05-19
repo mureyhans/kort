@@ -9,13 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Battlefield.unity
-    guid: dbf8d41d1c343ab4f99c4d631df92b65
+    path: Assets/Scenes/MainMenu.unity
+    guid: ad77ec5114df69d4daff5f431cca7b69
   - enabled: 1
     path: Assets/Scenes/CardSelection.unity
     guid: 99969f2b45587764dad207e0a688978a
-    path: Assets/Scenes/MainMenu.unity
-    guid: ad77ec5114df69d4daff5f431cca7b69
+  - enabled: 1
+    path: Assets/Scenes/Battlefield.unity
+    guid: 05b552f6225fb2b408466aa3fdb98bd5
   - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: b45dbe2e271f3c74e87e526ee35f1df9

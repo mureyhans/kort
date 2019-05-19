@@ -10,11 +10,11 @@ public class MainMenu : MonoBehaviour
     }
     public void Tutorial(){
 		Debug.Log("TUTORIAL!");
-	    SceneManager.LoadScene(2);
+	    SceneManager.LoadScene(4);
 	}
 	public void About(){
 		Debug.Log("ABOUT!");
-		SceneManager.LoadScene(3);
+		SceneManager.LoadScene(5);
 	}
     public void ExitGame(){
 		Debug.Log("EXIT!");
