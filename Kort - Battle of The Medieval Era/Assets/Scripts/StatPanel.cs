@@ -5,7 +5,7 @@ using UnityEngine;
 public class StatPanel : MonoBehaviour
 {
     [SerializeField] StatDisplay[] statDisplays;
-    [SerializeField] string[] statNames;
+    [SerializeField] string[] statNames = new string[4];
 
     private int[] stats;
 

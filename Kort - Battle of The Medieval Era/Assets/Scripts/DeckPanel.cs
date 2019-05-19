@@ -6,10 +6,13 @@ using UnityEngine;
 public class DeckPanel : MonoBehaviour
 {
 
-    [SerializeField] List<Card> cards;
-    [SerializeField] Transform cardsParent;
-    [SerializeField] CardSlot[] cardSlots;
-//    [SerializeField] WarningManager warningManager;
+    [SerializeField] List<Card> cards = new List<Card>();
+    [SerializeField] Transform cardsParent = null;
+    [SerializeField] CardSlot[] cardSlots = new CardSlot[20];
+    //    [SerializeField] WarningManager warningManager;
+    [Space]
+    [SerializeField] public AudioClip MusicClip;
+    [SerializeField] AudioSource MusicSource = null;
 
     private int countCardsInDeck;
     private int countUnitCards;
@@ -63,6 +66,7 @@ public class DeckPanel : MonoBehaviour
         if (IsFull() || countCardsInDeck >= maxCountCardsInDeck)
         {
             //warning deck full
+            MusicSource.Play();
             return false;
         }
 
@@ -75,6 +79,7 @@ public class DeckPanel : MonoBehaviour
                 return true;
             } else {
                 //warning hero
+                MusicSource.Play();
                 return false;
             }
         } else if (card.charTypeEnum == CardType.Weather || card.charTypeEnum == CardType.Buff)
@@ -86,6 +91,7 @@ public class DeckPanel : MonoBehaviour
                 return true;
             } else {
                 //warning special card
+                MusicSource.Play();
                 return false;
             }
         }
@@ -98,10 +104,12 @@ public class DeckPanel : MonoBehaviour
                 return true;
             } else {
                 //warning unit card
+                MusicSource.Play();
                 return false;
             }
         } else {
             //undefined card type
+            MusicSource.Play();
             return false;
         }
     }
