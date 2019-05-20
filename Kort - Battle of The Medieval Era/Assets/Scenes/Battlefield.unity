@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneType: Buff
   zoneBuffType: Archer
-  dropZone: {fileID: 844578036}
+  panelBattlefield: {fileID: 844578034}
 --- !u!114 &55776541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 339420164}
   - component: {fileID: 339420166}
   - component: {fileID: 339420165}
+  - component: {fileID: 339420167}
   m_Layer: 0
   m_Name: Total Point - All
   m_TagString: Untagged
@@ -710,6 +711,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 339420163}
   m_CullTransparentMesh: 0
+--- !u!114 &339420167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339420163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcd8bd26befd12b479ca048ec102eb18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreSwordsmen: {fileID: 1877385053}
+  scoreArcher: {fileID: 197439104}
+  scoreTrebuchet: {fileID: 1142127328}
 --- !u!1 &420804387
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,6 +1445,7 @@ MonoBehaviour:
   zoneType: Archer
   point: {fileID: 197439106}
   pointVal: 0
+  multiplier: 1
 --- !u!114 &844578037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1670,6 +1687,7 @@ MonoBehaviour:
   zoneType: Trebuchet
   point: {fileID: 1142127330}
   pointVal: 0
+  multiplier: 1
 --- !u!114 &1004031301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2212,6 +2230,7 @@ MonoBehaviour:
   zoneType: Swordsmen
   point: {fileID: 1877385056}
   pointVal: 0
+  multiplier: 1
 --- !u!114 &1943725969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2443,7 +2462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneType: Buff
   zoneBuffType: Trebuchet
-  dropZone: {fileID: 1004031300}
+  panelBattlefield: {fileID: 1004031298}
 --- !u!114 &2022097685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2559,7 +2578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   zoneType: Buff
   zoneBuffType: Swordsmen
-  dropZone: {fileID: 1943725968}
+  panelBattlefield: {fileID: 1943725966}
 --- !u!114 &2033696960
 MonoBehaviour:
   m_ObjectHideFlags: 0

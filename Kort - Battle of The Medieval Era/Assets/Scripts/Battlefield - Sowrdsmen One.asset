@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Battlefield - Sowrdsmen One
   m_EditorClassIdentifier: 
   charImage: {fileID: 21300000, guid: 465d49b0b579f9640afd7758e0faedd6, type: 3}
-  charTypeImage: {fileID: 21300000, guid: 2d640031008e9994e8270c24cf9f5449, type: 3}
+  charTypeImage: {fileID: 21300000, guid: cf0a87a8a90c3064ca1f21b61024f3ae, type: 3}
   charType: Swordsmen
   charPoint: 5

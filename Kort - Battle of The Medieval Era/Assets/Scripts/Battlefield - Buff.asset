@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Battlefield - Buff
   m_EditorClassIdentifier: 
   charImage: {fileID: 21300000, guid: ebded12fcba533b4d8a2a2a3bfbdf2da, type: 3}
-  charTypeImage: {fileID: 21300000, guid: 791af3044023e2f41aaff520f779a8ad, type: 3}
+  charTypeImage: {fileID: 21300000, guid: ed6fb419ac8ebbe4ba1513502c4d9fb3, type: 3}
   charType: Buff
   charPoint: 0
