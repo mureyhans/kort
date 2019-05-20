@@ -5,19 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class NewSceneManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
+
+    [SerializeField] DeckPanel deckPanel = null;
+    private int CardsInDeck = 0;
+
     void Update()
     {
-        
+        CardsInDeck = deckPanel.getCountCardsInDeck();
     }
 
     public void LoadScene(string sceneName){
-        SceneManager.LoadScene( sceneName );
+        if(sceneName == "Battlefield")
+        {
+            if (CardsInDeck >= 10)
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+            else
+            {
+                WarningSystemCID.Instance.ShowMessage(deckPanel.getCountCardsInDeck().ToString());
+                deckPanel.playAlert();
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 }

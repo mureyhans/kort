@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93bb4a6337f63d942b6407914504254b, type: 3}
-  m_Name: Archer One
+  m_Name: CS - Archer One
   m_EditorClassIdentifier: 
   charName: Archer One
   charDesc: May his shot never miss.

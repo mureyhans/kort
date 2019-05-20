@@ -22,8 +22,8 @@ public class Character : MonoBehaviour
         statPanel.SetStats(CardsInDeck, UnitCards, SpecialCards, HeroCards);
         statPanel.UpdateStatValues();
 
-        cardsCollection.OnCardRightClickedEvent += MoveCardToDeck;
-        deckPanel.OnCardRightClickedEvent += MoveCardToCollection;
+        cardsCollection.OnCardLeftClickedEvent += MoveCardToDeck;
+        deckPanel.OnCardLeftClickedEvent += MoveCardToCollection;
     }
     public void Update()
     {
@@ -38,8 +38,9 @@ public class Character : MonoBehaviour
     public void MoveCardToDeck(Card card) //equip
     {
 
-        if (!deckPanel.IsFull()) //deck ga penuh
-        {
+        //if (!deckPanel.IsFull()) //deck ga penuh
+        //{
+        /* pengecekan deck full sudah ada di method AddCard() */
             if (deckPanel.AddCard(card))
             {
                 if (cardsCollection.RemoveCard(card))
@@ -56,9 +57,9 @@ public class Character : MonoBehaviour
             {
                 Debug.Log("failed to remove card from collection");
             }
-        } else {
-            Debug.Log("Deck is full.");
-        }
+        //} else {
+        //    Debug.Log("Deck is full.");
+        //}
     }
     public void MoveCardToCollection(Card card) //unequip
     {
@@ -75,7 +76,4 @@ public class Character : MonoBehaviour
             Debug.Log("Card Collection is full.");
         }
     }
-
-
-
 }

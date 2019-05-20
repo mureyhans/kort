@@ -25,14 +25,13 @@ public class DeckPanel : MonoBehaviour
     private int maxCountSpecialCards = 6;
     private int maxCountHeroCards = 5;
 
-
-    public event Action<Card> OnCardRightClickedEvent;
+    public event Action<Card> OnCardLeftClickedEvent;
     private void Awake()
     {
         //DontDestroyOnLoad(transform.gameObject);
         for (int i = 0; i < cardSlots.Length; i++)
         {
-            cardSlots[i].OnRightClickEvent += OnCardRightClickedEvent;
+            cardSlots[i].OnLeftClickEvent += OnCardLeftClickedEvent;
         }
         countCardsInDeck = cards.Count;
         countUnitCards = getInitialCountUnitCards();
@@ -66,7 +65,8 @@ public class DeckPanel : MonoBehaviour
         if (IsFull() || countCardsInDeck >= maxCountCardsInDeck)
         {
             //warning deck full
-            MusicSource.Play();
+            WarningSystemCID.Instance.ShowMessage(getCountCardsInDeck().ToString());
+            playAlert();
             return false;
         }
 
@@ -79,7 +79,8 @@ public class DeckPanel : MonoBehaviour
                 return true;
             } else {
                 //warning hero
-                MusicSource.Play();
+                WarningSystemHC.Instance.ShowMessage(getCountHeroCards().ToString());
+                playAlert();
                 return false;
             }
         } else if (card.charTypeEnum == CardType.Weather || card.charTypeEnum == CardType.Buff)
@@ -91,7 +92,8 @@ public class DeckPanel : MonoBehaviour
                 return true;
             } else {
                 //warning special card
-                MusicSource.Play();
+                WarningSystemSC.Instance.ShowMessage(getCountSpecialCards().ToString());
+                playAlert();
                 return false;
             }
         }
@@ -104,12 +106,13 @@ public class DeckPanel : MonoBehaviour
                 return true;
             } else {
                 //warning unit card
-                MusicSource.Play();
+                WarningSystemUC.Instance.ShowMessage(getCountUnitCards().ToString());
+                playAlert();
                 return false;
             }
         } else {
             //undefined card type
-            MusicSource.Play();
+            playAlert();
             return false;
         }
     }
@@ -214,12 +217,20 @@ public class DeckPanel : MonoBehaviour
     private int getInitialCountHeroCards()
     {
         int initialCount = 0;
-        for(int i = 0; i < cards.Count; i++)
+        if (cards[0] == null)
         {
-            if (cards[i].isHeroChar)
+            return 0;
+        }
+        else
+        {
+            for (int i = 0; i < cards.Count; i++)
             {
-                initialCount++;
+                if (cards[i] != null && cards[i].isHeroChar)
+                {
+                    initialCount++;
+                }
             }
+
         }
         return initialCount;
     }
@@ -232,14 +243,20 @@ public class DeckPanel : MonoBehaviour
     private int getInitialCountUnitCards()
     {
         int initialCount = 0;
-        for (int i = 0; i < cards.Count; i++)
+        if(cards[0] == null)
         {
-            if (cards[i].charTypeEnum == CardType.Melee || cards[i].charTypeEnum == CardType.Ranged || cards[i].charTypeEnum == CardType.Siege)
+            return 0; 
+        } else
+        {
+            for (int i = 0; i < cards.Count; i++)
             {
-                initialCount++;
+                if (cards[i] != null && cards[i].charTypeEnum == CardType.Melee || cards[i].charTypeEnum == CardType.Ranged || cards[i].charTypeEnum == CardType.Siege)
+                {
+                    initialCount++;
+                }
             }
+            return initialCount;
         }
-        return initialCount;
     }
 
     public int getCountSpecialCards()
@@ -249,14 +266,25 @@ public class DeckPanel : MonoBehaviour
     private int getInitialCountSpecialCards()
     {
         int initialCount = 0;
-        for (int i = 0; i < cards.Count; i++)
+        if (cards[0] == null)
         {
-            if (cards[i].charTypeEnum == CardType.Weather || cards[i].charTypeEnum == CardType.Buff)
+            return 0;
+        } else
+        {
+            for (int i = 0; i < cards.Count; i++)
             {
-                initialCount++;
+                if (cards[i] != null && cards[i].charTypeEnum == CardType.Weather || cards[i].charTypeEnum == CardType.Buff)
+                {
+                    initialCount++;
+                }
             }
         }
         return initialCount;
     }
 
+
+    public void playAlert()
+    {
+        MusicSource.Play();
+    }
 }

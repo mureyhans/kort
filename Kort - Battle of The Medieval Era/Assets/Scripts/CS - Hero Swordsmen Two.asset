@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bb4a6337f63d942b6407914504254b, type: 3}
+  m_Name: CS - Hero Swordsmen Two
+  m_EditorClassIdentifier: 
+  charName: Hero Swordsman
+  charDesc: An exprert swordsman.
+  charImage: {fileID: 21300000, guid: 264556728c656754da380d6f3de4df79, type: 3}
+  charTypeImage: {fileID: 21300000, guid: cf0a87a8a90c3064ca1f21b61024f3ae, type: 3}
+  charPoint: 15
+  charTypeEnum: 0
+  isHeroChar: 1

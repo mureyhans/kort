@@ -12,12 +12,12 @@ public class CardsCollection : MonoBehaviour
     [SerializeField] public CardSlot[] cardSlots = new CardSlot[40];
 
 
-    public event Action<Card> OnCardRightClickedEvent;
+    public event Action<Card> OnCardLeftClickedEvent;
     private void Awake()
     {
         for(int i = 0; i < cardSlots.Length; i++)
         {
-            cardSlots[i].OnRightClickEvent += OnCardRightClickedEvent;
+            cardSlots[i].OnLeftClickEvent += OnCardLeftClickedEvent;
         }
     }
 

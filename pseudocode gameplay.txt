@@ -1,0 +1,41 @@
+
+
+
+void main()
+{
+	gameDone = false;
+	while(!gameDone)
+	{
+		roundSelesai = false; 
+		while(!roundSelesai)
+		{
+			pemainPlay();   //simpan 1 kartu ke battle field
+			opponentPlay(); //simpan 1 kartu ke battle field
+			if(pemain pass){
+				//selesaikan turn opponent (masukin kartu sebanyak-banyaknya,dll)
+				//opponent pass
+				roundSelesai = true;
+			} else if(opponent pass) {
+				//selesaikan turn pemain (masukin kartu sebanyak-banyaknya,dll)
+				//pemain pass
+				roundSelesai = true;
+			}
+		}
+		gameDone = isGameDone();
+	}
+}
+
+bool isGameDone()
+{
+	//bandingkan poin
+	//kurangi nyawa
+	if(nyawa pemain == 0){
+		popupKalah();
+		return true;
+	} else if(nyawa musuh == 0){
+		popupMenang();
+		return true;
+	} else {
+		return false;
+	}	
+}

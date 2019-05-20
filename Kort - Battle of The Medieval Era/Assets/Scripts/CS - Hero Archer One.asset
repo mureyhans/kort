@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93bb4a6337f63d942b6407914504254b, type: 3}
+  m_Name: CS - Hero Archer One
+  m_EditorClassIdentifier: 
+  charName: Hero Archer
+  charDesc: You better wish his shot miss.
+  charImage: {fileID: 21300000, guid: 6eea9c1bb475dab40a4adf2055068f70, type: 3}
+  charTypeImage: {fileID: 21300000, guid: 4892fbbf05200a2428afe9c1d0ce5782, type: 3}
+  charPoint: 10
+  charTypeEnum: 1
+  isHeroChar: 1

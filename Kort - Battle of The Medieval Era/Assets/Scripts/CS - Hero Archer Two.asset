@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 93bb4a6337f63d942b6407914504254b, type: 3}
-  m_Name: Hero Archer
+  m_Name: CS - Hero Archer Two
   m_EditorClassIdentifier: 
   charName: Hero Archer
   charDesc: You better wish his shot miss.
-  charImage: {fileID: 21300000, guid: 6eea9c1bb475dab40a4adf2055068f70, type: 3}
+  charImage: {fileID: 21300000, guid: 358cc7d74c8020542b0e485f8f3d52eb, type: 3}
   charTypeImage: {fileID: 21300000, guid: 4892fbbf05200a2428afe9c1d0ce5782, type: 3}
-  charPoint: 10
+  charPoint: 8
   charTypeEnum: 1
   isHeroChar: 1

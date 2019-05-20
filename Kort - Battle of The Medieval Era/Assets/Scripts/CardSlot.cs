@@ -52,7 +52,8 @@ public class CardSlot : MonoBehaviour, IPointerClickHandler
             charImage.sprite = card.charImage;
             charType.sprite = card.charTypeImage;
             charPointText.text = card.charPoint.ToString();
-        } else { //biar gak error kalau pertama ada card yang gak diinisialisasi
+        }
+        else { //biar gak error kalau pertama ada card yang gak diinisialisasi
             charNameText.text = null;
             charDescText.text = null;
             charImage.sprite = null;
@@ -69,7 +70,8 @@ public class CardSlot : MonoBehaviour, IPointerClickHandler
             charImage.sprite = card.charImage;
             charType.sprite = card.charTypeImage;
             charPointText.text = card.charPoint.ToString();
-        } else { //hapus tampilan
+        }
+        else { //hapus tampilan
             charNameText.text = null;
             charDescText.text = null;
             charImage.sprite = null;
@@ -78,15 +80,15 @@ public class CardSlot : MonoBehaviour, IPointerClickHandler
         }
     }
 
-    public event Action<Card> OnRightClickEvent;
+    public event Action<Card> OnLeftClickEvent;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        if(eventData != null && eventData.button == PointerEventData.InputButton.Right)
+        if(eventData != null /*&& eventData.clickCount == 2*/ && eventData.button == PointerEventData.InputButton.Left) //eventData.button == PointerEventData.InputButton.Right
         {
-            if (Card != null && OnRightClickEvent != null)
+            if (Card != null && OnLeftClickEvent != null)
             {
-                OnRightClickEvent(Card);
+                OnLeftClickEvent(Card);
                 Debug.Log("Right Click!");
             }
         }
