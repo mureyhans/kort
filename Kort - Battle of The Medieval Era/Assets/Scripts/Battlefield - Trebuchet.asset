@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Battlefield - Trebuchet
   m_EditorClassIdentifier: 
   charImage: {fileID: 21300000, guid: 59c8a40f978865f44b6a555bafde4130, type: 3}
-  charTypeImage: {fileID: 21300000, guid: 371d9849e62b1f74ca0cb91a767442b7, type: 3}
+  charTypeImage: {fileID: 21300000, guid: 9b2ec9840bb0e9148950c7ae1b9fb2c1, type: 3}
   charType: Trebuchet
   charPoint: 6
