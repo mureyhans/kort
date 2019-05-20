@@ -24,6 +24,9 @@ public class DropZoneMinion : MonoBehaviour, IDropHandler
                 pointVal = pointVal + (int.Parse(cardComponent.charPointText.text) * multiplier);
                 point.text = pointVal.ToString();
                // TotalPoint.totalScore += cardScore;
+            } else if(card.charType != zoneType)
+            {
+                WarningSystem.instance.showMessage(card.charType + " cannot be placed on " + this.zoneType + " zone type");
             }
         }
     }

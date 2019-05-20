@@ -9,12 +9,15 @@ public class DropZoneBuff : MonoBehaviour, IDropHandler
     public string zoneBuffType;
     //public DropZoneMinion dropZone;
     public GameObject panelBattlefield;
+    private bool buffPlaced = false;
 
     public void OnDrop(PointerEventData eventData) {
         if(this.transform.childCount != 0) {
             var children = new List<GameObject>();
             foreach(Transform child in this.transform) children.Add(child.gameObject);
             children.ForEach(child => Destroy(child));
+            int score = panelBattlefield.GetComponent<DropZoneMinion>().pointVal;
+            panelBattlefield.GetComponent<DropZoneMinion>().pointVal = score / 2;
         }
         if(panelBattlefield.transform.childCount == 0)
         {
@@ -34,7 +37,21 @@ public class DropZoneBuff : MonoBehaviour, IDropHandler
             if(card.charType == zoneType){
                 d.parentToReturnTo = this.transform;
                 // dropZone.pointVal = dropZone.pointVal * 2;
+            } else if (card.charType != zoneType)
+            {
+                WarningSystem.instance.showMessage(card.charType + " cannot be placed on " + this.zoneType +" zone type");
             }
+        }
+        buffPlaced = true;
+    }
+
+    void Update()
+    {
+        if(buffPlaced)
+        {
+            var children = new List<GameObject>();
+            foreach (Transform child in this.transform) children.Add(child.gameObject);
+            children.ForEach(child => Destroy(child.GetComponent<DragCard>()));
         }
     }
 }
