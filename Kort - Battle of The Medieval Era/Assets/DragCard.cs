@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class DragCard : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public Transform parentToReturnTo = null;
+    public int counter;
 
     public void OnBeginDrag(PointerEventData eventData) {
         parentToReturnTo = this.transform.parent;
